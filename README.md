@@ -28,6 +28,7 @@ Second step is lauch our web app
 
 ```sh
 $ cd client-app/
+$ npm install
 $ npm start
 ```
 now you can use the app
