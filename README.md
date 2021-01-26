@@ -12,7 +12,7 @@ Library APP is an app to manage books for librerians and users
 # Prerequisites
 Library App requires:
   - [Node.js](https://nodejs.org/) v 14.0 + to run.
-  - [.NetCore 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.1) SDK
+  - [.NetCore 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) SDK
 
 
 ### Run
