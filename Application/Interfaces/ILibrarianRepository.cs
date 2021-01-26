@@ -7,7 +7,7 @@ namespace Application
 {
     public interface ILibrarianRepository
     {
-        Task<List<string>> GetAllOverDueBooks();
+        Task<List<Book>> GetAllOverDueBooks();
         Task<List<Book>> GetBooks();
         Task<bool> AddBook(Book book);
         Task<bool> DeleteBookById(int bookId);

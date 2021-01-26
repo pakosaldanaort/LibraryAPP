@@ -17,7 +17,7 @@ namespace API.Controllers
         }
 
         [HttpGet("OverDueBooks")]
-        public async Task<ActionResult<IEnumerable<string>>> GetOverDueBooks()
+        public async Task<ActionResult<List<Book>>> GetOverDueBooks()
         {
             return await _librarianRepository.GetAllOverDueBooks();
         }

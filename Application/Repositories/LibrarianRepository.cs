@@ -28,6 +28,9 @@ namespace Application
         {
             var book = await _context.Books.FindAsync(bookId);
 
+            if(book.UserId.HasValue || book.CheckOutDate.HasValue)
+                return false;
+
             _context.Remove(book);
 
             var success = await _context.SaveChangesAsync() > 0;
@@ -35,11 +38,10 @@ namespace Application
             return success;
         }
 
-        public async Task<List<string>> GetAllOverDueBooks()
+        public async Task<List<Book>> GetAllOverDueBooks()
         {
             return await _context.Books
                     .Where(x => x.OverDueDate < DateTime.Today)
-                    .Select(x => "Title: " + x.Title + ", Author: " + x.Author + ", ISBN: " + x.ISBN )
                     .ToListAsync();
         }
 
