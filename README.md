@@ -21,7 +21,7 @@ First step is lauch our API from our main folder
 
 ```sh
 $ cd API/
-$ dotnet watch run
+$ dotnet run
 ```
 
 Second step is lauch our web app 
